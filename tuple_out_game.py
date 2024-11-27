@@ -9,6 +9,7 @@ class TupleOutGame:
     def roll_dice(self, num):
         # Use random.choices to simulate rolling 'num' dice
         return random.choices(range(1, 7), k=num)
+
     
     def play_turn(self, player):
         print(f"\n{player}'s turn!")
@@ -35,25 +36,26 @@ class TupleOutGame:
             for i in reroll_indices:
                 dice[i] = random.choices(range(1, 7), k=1)[0]
             print(f"Re-rolled dice: {dice}")
-        
+    
         total_score = sum(dice)
         print(f"{player} ends the turn with {total_score} points.")
         return total_score
-    
-    def play_game(self):
-        while True:
-            for player in self.players:
-                turn_score = self.play_turn(player)
-                self.scores[player] += turn_score
-                
-                print(f"{player}'s total score: {self.scores[player]}")
-                
-                if self.scores[player] >= self.target_score:
-                    print(f"\n{player} wins the game with {self.scores[player]} points!")
-                    return
 
-# Example usage
-players = ["Alice", "Bob"]
+def play_game(self):
+    while True:
+        for player in self.players:
+            turn_score = self.play_turn(player)
+            self.scores[player] += turn_score
+            
+            print(f"{player}'s total score: {self.scores[player]}")
+            
+            if self.scores[player] >= self.target_score:
+                print(f"\n{player} wins the game with {self.scores[player]} points!")
+                return
+
+
+
+players = ["Player 1", "Player 2"]
 target_score = 50
 game = TupleOutGame(players, target_score)
 game.play_game()
