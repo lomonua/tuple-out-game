@@ -5,6 +5,10 @@ The **Tuple Out Game** is a dice-based game where players take turns rolling thr
 
 ## Game Rules:
 - On each turn, a player rolls 3 dice.
+- If the initial roll is three 6's then the player gets a jackpot and rewarded 50 points
+- If the initial roll is three 1's then the player gets a penalty and loses 10 points
+- If no special condition applies, decide whether to reroll or keep your dice.
+- If you choose to reroll, non-fixed dice will be rolled again.
 - If all three dice are the same (a "tuple"), the player loses their turn and scores no points.
 - Otherwise, the player can keep any dice that show the same value (fixed dice) and re-roll the others.
 - The player can continue re-rolling the dice until they decide to stop or all dice are fixed.
@@ -18,3 +22,13 @@ The **Tuple Out Game** is a dice-based game where players take turns rolling thr
 -If you stop or tuple out it tells you how much you scored that round and your current score
 -It will then move on to the second player
 -The game will continue until one of the two players reaches 50
+-At the end of the game it will show how many games each player has one
+-It will also show the high scores from each game
+
+## Special Functions
+Tracks and displays player scores for each turn.
+Maintains a game log, including winners and scores for multiple rounds.
+Tracks and announces high scores across all games.
+
+## Advanced Function
+Shows how long it takes for the computer to process the turn
